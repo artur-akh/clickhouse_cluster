@@ -1,0 +1,5 @@
+[staging_clickhouse]
+Node1 ansible_host=172.31.31.183 zookeeper_id=1
+Node2 ansible_host=172.31.20.7 zookeeper_id=2
+Node3 ansible_host=172.31.27.157 zookeeper_id=3
+

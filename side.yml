@@ -1,0 +1,6 @@
+---
+- name: ClickHouse Cluster Setup and Configuration with Zookeeper
+  hosts: staging_clickhouse
+  become: yes
+  roles:
+     - { role: clickhouse_cluster, when: ansible_system == "Linux"}

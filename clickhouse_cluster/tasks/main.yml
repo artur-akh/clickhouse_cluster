@@ -1,0 +1,17 @@
+---
+- name: Test Ping my servers
+  ping:
+
+- name: Check Linux distribution name. Will be a mistake if linux != Ubuntu or Debian
+  debug: var=ansible_os_family  
+  
+- block: 
+  
+    - include_tasks: zookeeper.yml
+
+    - include_tasks: clickhouse.yml
+  
+  when: ansible_os_family == "Debian"
+
+
+
